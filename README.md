@@ -55,16 +55,16 @@ Reuses past solutions and correction patterns for similar problems.
 
 ```mermaid
 flowchart TD
-    A[User Input<br/>(Text / Image / Audio)]
-    B[OCR / ASR]
-    C[Parser Agent]
-    D[Intent Router]
-    E[Retriever<br/>(RAG)]
-    F[Solver Agent]
-    G[Verifier Agent]
-    H[Explainer Agent]
-    I[User Feedback<br/>(HITL)]
-    J[Memory Store]
+    A["User Input\n(Text / Image / Audio)"]
+    B["OCR / ASR"]
+    C["Parser Agent"]
+    D["Intent Router"]
+    E["Retriever (RAG)"]
+    F["Solver Agent"]
+    G["Verifier Agent"]
+    H["Explainer Agent"]
+    I["User Feedback (HITL)"]
+    J["Memory Store"]
 
     A --> B --> C --> D
     D --> E --> F --> G --> H
