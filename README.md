@@ -49,3 +49,24 @@ Reuses past solutions and correction patterns for similar problems.
 - Linear Algebra (intro level)  
 
 *(JEE-style difficulty, not olympiad)*
+
+
+## 🏗️ System Architecture
+flowchart TD
+    A[User Input<br/>(Text / Image / Audio)]
+    B[OCR / ASR]
+    C[Parser Agent]
+    D[Intent Router]
+    E[Retriever (RAG)]
+    F[Solver Agent]
+    G[Verifier Agent]
+    H[Explainer Agent]
+    I[User Feedback]
+    J[Memory Store]
+
+    A --> B --> C --> D
+    D --> E --> F --> G --> H
+    G -->|Low confidence| I
+    H --> I
+    I --> J
+    J --> E
