@@ -1,0 +1,13 @@
+Linear Equation Rules:
+To solve ax + b = c:
+- Subtract b from both sides
+- Divide by a
+
+Always isolate the variable.
+
+Common mistakes:
+- Forgetting to divide fully
+- Sign errors
+
+Domain rule:
+Division by zero is not allowed.

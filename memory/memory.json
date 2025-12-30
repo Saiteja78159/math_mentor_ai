@@ -1,0 +1,50 @@
+[
+  {
+    "input": "solve x^2 - 5x + 6 = 0",
+    "parsed": {
+      "problem_text": "x^2-5x+6=0",
+      "topic": "algebra",
+      "variables": [
+        "x"
+      ],
+      "constraints": [],
+      "needs_clarification": false
+    },
+    "solution": "Given equation: 1x\u00b2 + -5x + 6 = 0\nUsing quadratic formula:\nx = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)\nDiscriminant = -5\u00b2 - 4\u00d71\u00d76 = 1\nx\u2081 = 3.0\nx\u2082 = 2.0",
+    "verified": true,
+    "confidence": 0.9,
+    "feedback": "correct"
+  },
+  {
+    "input": "Solve x^2+4x+3=0",
+    "parsed": {
+      "problem_text": "x^2+4x+3=0",
+      "topic": "algebra",
+      "variables": [
+        "x"
+      ],
+      "constraints": [],
+      "needs_clarification": false
+    },
+    "solution": "Given equation: 1x\u00b2 + 4x + 3 = 0\nUsing quadratic formula:\nx = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)\nDiscriminant = 4\u00b2 - 4\u00d71\u00d73 = 4\nx\u2081 = -1.0\nx\u2082 = -3.0",
+    "verified": true,
+    "confidence": 0.9,
+    "feedback": "correct"
+  },
+  {
+    "input": "solve x^2+4x+3 =0.",
+    "parsed": {
+      "problem_text": "x^2+4x+3=0.",
+      "topic": "algebra",
+      "variables": [
+        "x"
+      ],
+      "constraints": [],
+      "needs_clarification": false
+    },
+    "solution": "Given equation: 1x\u00b2 + 4x + 3 = 0\nUsing quadratic formula:\nx = (-b \u00b1 \u221a(b\u00b2 - 4ac)) / (2a)\nDiscriminant = 4\u00b2 - 4\u00d71\u00d73 = 4\nx\u2081 = -1.0\nx\u2082 = -3.0",
+    "verified": true,
+    "confidence": 0.9,
+    "feedback": "correct"
+  }
+]
