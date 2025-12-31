@@ -1,3 +1,37 @@
+# # # streamlit>=1.25.0
+# # # pillow>=10.0.0
+# # # pytesseract>=0.3.10
+# # # sentence-transformers>=2.2.2
+# # # faiss-cpu>=1.7.4
+# # # faster-whisper>=0.6.0
+# # # numpy>=1.24.0
+# # # scipy>=1.10.0
+
+
+# # # streamlit>=1.25.0
+# # # pillow>=10.0.0
+# # # pytesseract>=0.3.10
+# # # sentence-transformers>=2.2.2
+# # # faiss-cpu>=1.7.4
+# # # faster-whisper>=0.6.0
+# # # numpy>=1.24.0
+# # # scipy>=1.10.0
+
+# # # streamlit>=1.25.0
+# # # pillow>=10.0.0
+# # # pytesseract>=0.3.10
+
+# # # sentence-transformers>=2.2.2
+# # # faiss-cpu>=1.7.4
+
+# # # faster-whisper>=0.6.0
+
+# # # numpy>=1.24.0
+# # # scipy>=1.10.0
+
+# # # python-dotenv>=1.0.0
+# # # google-generativeai>=0.4.1
+
 # # streamlit>=1.25.0
 # # pillow>=10.0.0
 # # pytesseract>=0.3.10
@@ -6,63 +40,42 @@
 # # faster-whisper>=0.6.0
 # # numpy>=1.24.0
 # # scipy>=1.10.0
-
-
-# # streamlit>=1.25.0
-# # pillow>=10.0.0
-# # pytesseract>=0.3.10
-# # sentence-transformers>=2.2.2
-# # faiss-cpu>=1.7.4
-# # faster-whisper>=0.6.0
-# # numpy>=1.24.0
-# # scipy>=1.10.0
-
-# # streamlit>=1.25.0
-# # pillow>=10.0.0
-# # pytesseract>=0.3.10
-
-# # sentence-transformers>=2.2.2
-# # faiss-cpu>=1.7.4
-
-# # faster-whisper>=0.6.0
-
-# # numpy>=1.24.0
-# # scipy>=1.10.0
-
 # # python-dotenv>=1.0.0
 # # google-generativeai>=0.4.1
 
+
+# # Streamlit
 # streamlit>=1.25.0
+
+# # Image processing
 # pillow>=10.0.0
-# pytesseract>=0.3.10
+# easyocr>=1.6.2
+# torch>=2.0.0
+
+# # Text and embeddings
 # sentence-transformers>=2.2.2
 # faiss-cpu>=1.7.4
+
+# # Audio processing
 # faster-whisper>=0.6.0
+
+# # Math and computation
 # numpy>=1.24.0
 # scipy>=1.10.0
+
+# # Environment and API
 # python-dotenv>=1.0.0
 # google-generativeai>=0.4.1
 
 
-# Streamlit
 streamlit>=1.25.0
-
-# Image processing
 pillow>=10.0.0
 easyocr>=1.6.2
 torch>=2.0.0
-
-# Text and embeddings
 sentence-transformers>=2.2.2
 faiss-cpu>=1.7.4
-
-# Audio processing
 faster-whisper>=0.6.0
-
-# Math and computation
 numpy>=1.24.0
 scipy>=1.10.0
-
-# Environment and API
 python-dotenv>=1.0.0
 google-generativeai>=0.4.1
