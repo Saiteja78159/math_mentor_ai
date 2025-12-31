@@ -1085,6 +1085,7 @@ from agents.verifier_agent import verify_solution
 from utils.ocr import extract_text_from_image
 from utils.asr import transcribe_audio
 from utils.rag import retrieve_context
+from utils.math_normalizer import normalize_equation
 
 # =========================
 # MEMORY
@@ -1235,14 +1236,25 @@ if st.button("Solve"):
         st.success("✔️ Solution verified automatically")
 
         # ---------- SAVE TO MEMORY ----------
+        # add_memory({
+        #     "input": final_input,
+        #     "parsed": parsed,
+        #     "solution": solution,
+        #     "verified": verification["verified"],
+        #     "confidence": verification["confidence"],
+        #     "feedback": "correct"
+        # })
+
         add_memory({
-            "input": final_input,
-            "parsed": parsed,
-            "solution": solution,
-            "verified": verification["verified"],
-            "confidence": verification["confidence"],
-            "feedback": "correct"
+               "input": final_input,
+               "normalized": normalize_equation(parsed["problem_text"]),
+               "parsed": parsed,
+               "solution": solution,
+               "verified": verification["verified"],
+               "confidence": verification["confidence"],
+               "feedback": "correct"
         })
+
 
     # ---------- RAG DISPLAY ----------
     st.subheader("📚 Retrieved Knowledge (RAG)")
