@@ -1085,7 +1085,7 @@ from agents.verifier_agent import verify_solution
 from utils.ocr import extract_text_from_image
 from utils.asr import transcribe_audio
 from utils.rag import retrieve_context
-from utils.math_normalizer import normalize_equation
+from utils.math_normalizer import normalize_math
 
 # =========================
 # MEMORY
@@ -1247,7 +1247,7 @@ if st.button("Solve"):
 
         add_memory({
                "input": final_input,
-               "normalized": normalize_equation(parsed["problem_text"]),
+               "normalized": normalize_math(parsed["problem_text"]),
                "parsed": parsed,
                "solution": solution,
                "verified": verification["verified"],
