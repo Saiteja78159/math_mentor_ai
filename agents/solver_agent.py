@@ -731,44 +731,77 @@ def solve_linear_equation(equation: str):
 # QUADRATIC EQUATION SOLVER
 # ax² + bx + c = 0
 # =========================
+# def solve_quadratic_equation(equation: str):
+#     equation = equation.replace(" ", "")
+
+#     match = re.match(r"([+-]?\d*)x\^2([+-]\d+)x([+-]?\d+)=0", equation)
+#     if not match:
+#         return None
+
+#     a, b, c = match.groups()
+#     a = int(a) if a not in ["", "+"] else 1
+#     if a == "-":
+#         a = -1
+#     b = int(b)
+#     c = int(c)
+
+#     steps = []
+#     steps.append(f"Given equation: {a}x² + {b}x + {c} = 0")
+#     steps.append("Using quadratic formula:")
+#     steps.append("x = (-b ± √(b² - 4ac)) / (2a)")
+
+#     discriminant = b**2 - 4*a*c
+#     steps.append(f"Discriminant = {b}² - 4×{a}×{c} = {discriminant}")
+
+#     # Handle complex roots
+#     if discriminant < 0:
+#         real_part = -b / (2*a)
+#         imag_part = math.sqrt(abs(discriminant)) / (2*a)
+#         steps.append("Discriminant is negative → complex roots")
+#         steps.append(f"x₁ = {real_part} + {imag_part}i")
+#         steps.append(f"x₂ = {real_part} - {imag_part}i")
+#         return "\n".join(steps)
+
+#     sqrt_d = math.sqrt(discriminant)
+#     x1 = (-b + sqrt_d) / (2*a)
+#     x2 = (-b - sqrt_d) / (2*a)
+#     steps.append(f"x₁ = {x1}")
+#     steps.append(f"x₂ = {x2}")
+
+#     return "\n".join(steps)
+
 def solve_quadratic_equation(equation: str):
     equation = equation.replace(" ", "")
-
-    match = re.match(r"([+-]?\d*)x\^2([+-]\d+)x([+-]?\d+)=0", equation)
+    
+    # Regex to handle implicit 1 coefficient: 1x^2-1x+6=0, 2x^2+3x+4=0
+    match = re.match(r"([+-]?\d+)x\^2([+-]?\d+)x([+-]?\d+)=0", equation)
     if not match:
         return None
 
     a, b, c = match.groups()
-    a = int(a) if a not in ["", "+"] else 1
-    if a == "-":
-        a = -1
-    b = int(b)
-    c = int(c)
+    a, b, c = int(a), int(b), int(c)
 
     steps = []
     steps.append(f"Given equation: {a}x² + {b}x + {c} = 0")
-    steps.append("Using quadratic formula:")
-    steps.append("x = (-b ± √(b² - 4ac)) / (2a)")
+    steps.append("Using quadratic formula: x = (-b ± √(b² - 4ac)) / (2a)")
 
     discriminant = b**2 - 4*a*c
     steps.append(f"Discriminant = {b}² - 4×{a}×{c} = {discriminant}")
 
-    # Handle complex roots
     if discriminant < 0:
-        real_part = -b / (2*a)
-        imag_part = math.sqrt(abs(discriminant)) / (2*a)
-        steps.append("Discriminant is negative → complex roots")
-        steps.append(f"x₁ = {real_part} + {imag_part}i")
-        steps.append(f"x₂ = {real_part} - {imag_part}i")
-        return "\n".join(steps)
+        sqrt_d = complex(0, abs(discriminant)**0.5)
+        x1 = (-b + sqrt_d) / (2*a)
+        x2 = (-b - sqrt_d) / (2*a)
+    else:
+        sqrt_d = discriminant**0.5
+        x1 = (-b + sqrt_d) / (2*a)
+        x2 = (-b - sqrt_d) / (2*a)
 
-    sqrt_d = math.sqrt(discriminant)
-    x1 = (-b + sqrt_d) / (2*a)
-    x2 = (-b - sqrt_d) / (2*a)
     steps.append(f"x₁ = {x1}")
     steps.append(f"x₂ = {x2}")
 
     return "\n".join(steps)
+
 
 
 # =========================
