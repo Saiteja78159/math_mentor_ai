@@ -1128,7 +1128,7 @@ elif input_mode == "Image":
 
     if image_file is not None:
         image = Image.open(image_file)
-        st.image(image, caption="Uploaded Image", use_column_width=True)
+        st.image(image, caption="Uploaded Image", width = 500)
 
         cleaned_text, confidence = extract_text_from_image(image)
 
