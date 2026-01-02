@@ -44,9 +44,6 @@ Reuses past solutions and correction patterns for similar problems.
 
 ## 📚 Supported Math Scope
 - Algebra (linear & quadratic equations)  
-- Probability (basic)  
-- Calculus (limits, derivatives – basic)  
-- Linear Algebra (intro level)  
 
 *(JEE-style difficulty, not olympiad)*
 
